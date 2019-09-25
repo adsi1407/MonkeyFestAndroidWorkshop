@@ -128,6 +128,10 @@
       <Project>{4485BE2C-5A06-4998-B74E-6B0E4F4DDCBF}</Project>
       <Name>MonkeyFestWorkshop.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MonkeyFestWorkshop.Core\MonkeyFestWorkshop.Core.csproj">
+      <Project>{31ACE449-0A61-484F-802A-9B937A3F3653}</Project>
+      <Name>MonkeyFestWorkshop.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <GoogleServicesJson Include="google-services.json" />
