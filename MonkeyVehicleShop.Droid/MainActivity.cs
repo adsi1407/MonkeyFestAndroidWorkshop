@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Android.App;
+using System.Linq;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Firebase;
 using Firebase.Database;
-using Java.Interop;
-using Java.Util;
 using MonkeyFestWorkshop.Domain.Models;
 using Newtonsoft.Json;
 
@@ -81,13 +78,16 @@ namespace MonkeyVehicleShop.Droid
                     Plate = dataSnapshot.Child("plate").Value.ToString(),
                     Model = dataSnapshot.Child("model").Value.ToString(),
                     Line = dataSnapshot.Child("line").Value.ToString(),
-                    BrandName = dataSnapshot.Child("brand_name").Value.ToString()
+                    BrandName = dataSnapshot.Child("brand_name").Value.ToString(),
+                    Price = dataSnapshot.Child("price").Value.ToString()
                 };
 
                 list.Add(car);
             }
 
-            ConfigRecyclerView(list);
+            List<BaseVehicle> orderList = list.OrderByDescending((x) =>  x.Price).ToList();
+
+            ConfigRecyclerView(orderList);
         }
     }
 }
