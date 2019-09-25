@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "405418826340",
+    "firebase_url": "https://monkeyfestworkshop-eb6eb.firebaseio.com",
+    "project_id": "monkeyfestworkshop-eb6eb",
+    "storage_bucket": "monkeyfestworkshop-eb6eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405418826340:android:efeedde6756bedeedc1d71",
+        "android_client_info": {
+          "package_name": "co.com.ceiba.monkey_vehicle_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405418826340-ahvdtjejl2hs647hv4clnrsh83ro532i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVfo7xI-UOBU84_b3hcD7ONBuS5QjIbr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405418826340-ahvdtjejl2hs647hv4clnrsh83ro532i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
