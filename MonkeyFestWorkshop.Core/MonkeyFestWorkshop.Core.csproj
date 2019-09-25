@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyFestWorkshop.DataAccess\MonkeyFestWorkshop.DataAccess.csproj" />
+    <ProjectReference Include="..\MonkeyFestWorkshop.Domain\MonkeyFestWorkshop.Domain.csproj" />
+  </ItemGroup>
 </Project>
