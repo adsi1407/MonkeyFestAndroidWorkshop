@@ -8,4 +8,7 @@
     <ProjectReference Include="..\MonkeyFestWorkshop.DataAccess\MonkeyFestWorkshop.DataAccess.csproj" />
     <ProjectReference Include="..\MonkeyFestWorkshop.Domain\MonkeyFestWorkshop.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+  </ItemGroup>
 </Project>
