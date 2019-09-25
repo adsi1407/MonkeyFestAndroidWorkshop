@@ -19,18 +19,45 @@ namespace MonkeyVehicleShop.Droid
 
         public override int ItemCount => vehicles.Count;
 
+        public override int GetItemViewType(int position)
+        {
+            if (vehicles.ElementAt(position).Featured)
+            {
+                return (int)SectionType.Featured;
+            }
+            else
+            {
+                return (int)SectionType.Classic;
+            }
+        }
+
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             BaseVehicle vehicle = vehicles.ElementAt(position);
-            VehicleViewHolder viewHolder = holder as VehicleViewHolder;
-            viewHolder.BindData(vehicle);
-
+            if (vehicle.Featured)
+            {
+                FeaturedViewHolder viewHolder = holder as FeaturedViewHolder;
+                viewHolder.BindData(vehicle);
+            }
+            else
+            {
+                VehicleViewHolder viewHolder = holder as VehicleViewHolder;
+                viewHolder.BindData(vehicle);
+            }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View view = LayoutInflater.FromContext(parent.Context).Inflate(Resource.Layout.vehicle_item, parent, false);
-            return new VehicleViewHolder(view, OnClick);
+            if (viewType == (int)SectionType.Featured)
+            {
+                View view = LayoutInflater.FromContext(parent.Context).Inflate(Resource.Layout.featured_vehicle_item, parent, false);
+                return new FeaturedViewHolder(view, OnClick);
+            }
+            else
+            {
+                View view = LayoutInflater.FromContext(parent.Context).Inflate(Resource.Layout.vehicle_item, parent, false);
+                return new VehicleViewHolder(view, OnClick);
+            }
         }
 
         private void OnClick(int position)

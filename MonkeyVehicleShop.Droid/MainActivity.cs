@@ -22,15 +22,15 @@ namespace MonkeyVehicleShop.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
-
             FirebaseApp.InitializeApp(Application.Context);
+
             LoadVehicles();
         }
 
-        private void ConfigRecyclerView(List<BaseVehicle> list)
+        private void ConfigRecyclerView(List<SectionItem> menu)
         {
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView_vehicles);
-            var adapter = new VehiclesAdapter(list);
+            var adapter = new SectionMenuAdapter(menu);
             adapter.OnItemClick += Adapter_OnItemClick;
             recyclerView.SetLayoutManager(new LinearLayoutManager(this));
             recyclerView.SetAdapter(adapter);
@@ -82,12 +82,39 @@ namespace MonkeyVehicleShop.Droid
                     Price = dataSnapshot.Child("price").Value.ToString()
                 };
 
+                if (dataSnapshot.Child("featured").Value is Java.Lang.Boolean)
+                {
+                    var featured = dataSnapshot.Child("featured").Value as Java.Lang.Boolean;
+                    car.Featured = featured.BooleanValue();
+                }
+                
+
                 list.Add(car);
             }
 
-            List<BaseVehicle> orderList = list.OrderByDescending((x) =>  x.Price).ToList();
+            List<BaseVehicle> orderList = list.Where(x => !x.Featured).Select(x => x).OrderByDescending((x) =>  x.Price).ToList();
+            List<BaseVehicle> featuredVehicles = list.Where(x => x.Featured).Select(x => x).ToList();
 
-            ConfigRecyclerView(orderList);
+            List<SectionItem> sectionItems = new List<SectionItem>();
+
+            var featuredItems = new SectionItem
+            {
+                Title = "Destacados",
+                Vehicles = featuredVehicles,
+                SectionType = SectionType.Featured
+            };
+
+            var classicItems = new SectionItem
+            {
+                Title = "Vehículos",
+                Vehicles = orderList,
+                SectionType = SectionType.Classic
+            };
+
+            sectionItems.Add(featuredItems);
+            sectionItems.Add(classicItems);
+             
+            ConfigRecyclerView(sectionItems);
         }
     }
 }

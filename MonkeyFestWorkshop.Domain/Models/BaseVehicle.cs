@@ -16,6 +16,8 @@ namespace MonkeyFestWorkshop.Domain.Models
 
         public string Price { get; set; }
 
+        public bool Featured { get; set; }
+
         protected abstract bool ValidatePlate(string plate);
 
         protected abstract IEnumerable<string> ValidateVehicle();
