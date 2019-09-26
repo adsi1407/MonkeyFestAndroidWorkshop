@@ -4201,13 +4201,58 @@ namespace MonkeyVehicleShop.Droid
 		{
 			
 			// aapt resource value: 0x7F0D0000
-			public const int ic_launcher = 2131558400;
+			public const int ic_car_1 = 2131558400;
 			
 			// aapt resource value: 0x7F0D0001
-			public const int ic_launcher_foreground = 2131558401;
+			public const int ic_car_2 = 2131558401;
 			
 			// aapt resource value: 0x7F0D0002
-			public const int ic_launcher_round = 2131558402;
+			public const int ic_car_3 = 2131558402;
+			
+			// aapt resource value: 0x7F0D0003
+			public const int ic_car_4 = 2131558403;
+			
+			// aapt resource value: 0x7F0D0004
+			public const int ic_car_5 = 2131558404;
+			
+			// aapt resource value: 0x7F0D0005
+			public const int ic_car_6 = 2131558405;
+			
+			// aapt resource value: 0x7F0D0006
+			public const int ic_car_7 = 2131558406;
+			
+			// aapt resource value: 0x7F0D0007
+			public const int ic_launcher = 2131558407;
+			
+			// aapt resource value: 0x7F0D0008
+			public const int ic_launcher_foreground = 2131558408;
+			
+			// aapt resource value: 0x7F0D0009
+			public const int ic_launcher_round = 2131558409;
+			
+			// aapt resource value: 0x7F0D000A
+			public const int ic_motorcycle_1 = 2131558410;
+			
+			// aapt resource value: 0x7F0D000B
+			public const int ic_motorcycle_2 = 2131558411;
+			
+			// aapt resource value: 0x7F0D000C
+			public const int ic_motorcycle_3 = 2131558412;
+			
+			// aapt resource value: 0x7F0D000D
+			public const int ic_motorcycle_4 = 2131558413;
+			
+			// aapt resource value: 0x7F0D000E
+			public const int ic_motorcycle_5 = 2131558414;
+			
+			// aapt resource value: 0x7F0D000F
+			public const int ic_motorcycle_6 = 2131558415;
+			
+			// aapt resource value: 0x7F0D0010
+			public const int ic_motorcycle_7 = 2131558416;
+			
+			// aapt resource value: 0x7F0D0011
+			public const int ic_motorcycle_8 = 2131558417;
 			
 			static Mipmap()
 			{
