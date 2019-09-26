@@ -4,8 +4,9 @@ using System.Linq;
 using Android.Support.V7.Widget;
 using Android.Views;
 using MonkeyFestWorkshop.Domain.Models;
+using MonkeyVehicleShop.Droid.ViewHolders;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyVehicleShop.Droid.Adapters
 {
     public class VehiclesAdapter: RecyclerView.Adapter
     {

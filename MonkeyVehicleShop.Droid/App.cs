@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using MonkeyVehicleShop.Droid.DependencyInjection;
 
 namespace MonkeyVehicleShop.Droid
 {

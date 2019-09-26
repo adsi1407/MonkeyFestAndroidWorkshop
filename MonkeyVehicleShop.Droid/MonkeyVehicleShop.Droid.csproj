@@ -58,19 +58,18 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehiclesList.cs" />
-    <Compile Include="VehiclesAdapter.cs" />
-    <Compile Include="VehicleViewHolder.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="SplashActivity.cs" />
-    <Compile Include="VehicleDetailActivity.cs" />
-    <Compile Include="SectionMenuAdapter.cs" />
-    <Compile Include="SectionItemViewHolder.cs" />
-    <Compile Include="FeaturedViewHolder.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="PlatformIoCContainer.cs" />
+    <Compile Include="DependencyInjection\PlatformIoCContainer.cs" />
+    <Compile Include="Adapters\SectionMenuAdapter.cs" />
+    <Compile Include="ViewHolders\FeaturedViewHolder.cs" />
+    <Compile Include="ViewHolders\SectionItemViewHolder.cs" />
+    <Compile Include="ViewHolders\VehicleViewHolder.cs" />
+    <Compile Include="Adapters\VehiclesAdapter.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Activities\VehicleDetailActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -458,6 +457,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="DependencyInjection\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="ViewHolders\" />
+    <Folder Include="Activities\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

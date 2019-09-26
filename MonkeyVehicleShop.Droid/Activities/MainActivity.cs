@@ -10,8 +10,9 @@ using Firebase;
 using Firebase.Database;
 using MonkeyFestWorkshop.Domain.Models;
 using Newtonsoft.Json;
+using MonkeyVehicleShop.Droid.Adapters;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyVehicleShop.Droid.Activities
 {
     [Activity]
     public class MainActivity : AppCompatActivity, IValueEventListener
@@ -57,7 +58,6 @@ namespace MonkeyVehicleShop.Droid
             intent.PutExtras(extras);
 
             StartActivity(intent);
-
         }
 
         public void OnCancelled(DatabaseError error)
@@ -88,7 +88,6 @@ namespace MonkeyVehicleShop.Droid
                     car.Featured = featured.BooleanValue();
                 }
                 
-
                 list.Add(car);
             }
 

@@ -3,7 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyVehicleShop.Droid.Activities
 {
     [Activity(MainLauncher = true)]
     public class SplashActivity : Activity

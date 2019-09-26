@@ -4,11 +4,10 @@ using Android.Views;
 using Android.Widget;
 using MonkeyFestWorkshop.Domain.Models;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyVehicleShop.Droid.ViewHolders
 {
     public class FeaturedViewHolder : RecyclerView.ViewHolder
     {
-        private ImageView vehicleImage;
         private TextView brandName;
 
         public FeaturedViewHolder(View view, Action<int> clickListener) : base(view)

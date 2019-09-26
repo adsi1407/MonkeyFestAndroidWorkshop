@@ -5,7 +5,7 @@ using Android.Widget;
 using MonkeyFestWorkshop.Domain.Models;
 using Newtonsoft.Json;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyVehicleShop.Droid.Activities
 {
     [Activity]
     public class VehicleDetailActivity : AppCompatActivity
@@ -44,7 +44,6 @@ namespace MonkeyVehicleShop.Droid
 
         private void GetExtras()
         {
-
             vehicle = JsonConvert.DeserializeObject<Car>(Intent.Extras.GetString("vehicle"));
         }
     }
