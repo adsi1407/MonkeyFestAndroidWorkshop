@@ -9,5 +9,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="Implementations\Real\" />
+    <Folder Include="Implementations\Mock\" />
   </ItemGroup>
 </Project>
