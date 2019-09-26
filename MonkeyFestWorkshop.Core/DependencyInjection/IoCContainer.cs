@@ -2,18 +2,21 @@
 
 namespace MonkeyFestWorkshop.Core.DependencyInjection
 {
-    public class SetupContainer
+    public abstract class IoCContainer
     {
         public IContainer CreateContainer()
         {
             var containerBuilder = new ContainerBuilder();
+            RegisterSharedDependencies(containerBuilder);
             RegisterDependencies(containerBuilder);
             return containerBuilder.Build();
         }
 
-        private void RegisterDependencies(ContainerBuilder containerBuilder)
+        private void RegisterSharedDependencies(ContainerBuilder containerBuilder)
         {
             containerBuilder.RegisterModule<RepositoriesModule>();
         }
+
+        protected abstract void RegisterDependencies(ContainerBuilder containerBuilder);
     }
 }
