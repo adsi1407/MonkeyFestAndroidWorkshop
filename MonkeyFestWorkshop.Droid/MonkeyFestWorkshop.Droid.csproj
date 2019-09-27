@@ -10,8 +10,8 @@
     <TemplateGuid>{84dd83c5-0fe3-4294-9419-09e7c8ba324f}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonkeyVehicleShop.Droid</RootNamespace>
-    <AssemblyName>MonkeyVehicleShop.Droid</AssemblyName>
+    <RootNamespace>MonkeyFestWorkshop.Droid</RootNamespace>
+    <AssemblyName>MonkeyFestWorkshop.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>

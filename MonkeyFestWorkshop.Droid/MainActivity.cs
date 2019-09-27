@@ -11,7 +11,7 @@ using Firebase.Database;
 using MonkeyFestWorkshop.Domain.Models;
 using Newtonsoft.Json;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     [Activity]
     public class MainActivity : AppCompatActivity, IValueEventListener

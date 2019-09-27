@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MonkeyFestWorkshop.Domain.Models;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     public class VehiclesList
     {

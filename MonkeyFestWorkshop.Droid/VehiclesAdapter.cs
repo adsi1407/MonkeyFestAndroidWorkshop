@@ -5,7 +5,7 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using MonkeyFestWorkshop.Domain.Models;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     public class VehiclesAdapter: RecyclerView.Adapter
     {

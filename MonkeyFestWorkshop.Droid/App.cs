@@ -1,6 +1,6 @@
 ﻿using Android.App;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     public class App: Application
     {

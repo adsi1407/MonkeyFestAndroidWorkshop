@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using MonkeyFestWorkshop.Core.DependencyInjection;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     public class PlatformIoCContainer : IoCContainer
     {
