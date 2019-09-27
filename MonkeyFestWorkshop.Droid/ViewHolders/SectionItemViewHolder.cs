@@ -5,7 +5,7 @@ using Android.Widget;
 using MonkeyFestWorkshop.Domain.Enumerations;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 
-namespace MonkeyVehicleShop.Droid.ViewHolders
+namespace MonkeyFestWorkshop.Droid.ViewHolders
 {
     public class SectionItemViewHolder : RecyclerView.ViewHolder
     {

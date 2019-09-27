@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFestWorkshop.Domain", "MonkeyFestWorkshop.Domain\MonkeyFestWorkshop.Domain.csproj", "{4485BE2C-5A06-4998-B74E-6B0E4F4DDCBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyVehicleShop.Droid", "MonkeyVehicleShop.Droid\MonkeyVehicleShop.Droid.csproj", "{CB142B6D-7319-422B-BEA8-09C3CB77C6F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFestWorkshop.Droid", "MonkeyFestWorkshop.Droid\MonkeyFestWorkshop.Droid.csproj", "{CB142B6D-7319-422B-BEA8-09C3CB77C6F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFestWorkshop.Core", "MonkeyFestWorkshop.Core\MonkeyFestWorkshop.Core.csproj", "{31ACE449-0A61-484F-802A-9B937A3F3653}"
 EndProject

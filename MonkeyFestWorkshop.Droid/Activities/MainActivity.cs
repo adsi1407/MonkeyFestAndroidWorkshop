@@ -9,12 +9,12 @@ using Android.Util;
 using Firebase;
 using Firebase.Database;
 using Newtonsoft.Json;
-using MonkeyVehicleShop.Droid.Adapters;
+using MonkeyFestWorkshop.Droid.Adapters;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
 using MonkeyFestWorkshop.Domain.Enumerations;
 
-namespace MonkeyVehicleShop.Droid.Activities
+namespace MonkeyFestWorkshop.Droid.Activities
 {
     [Activity]
     public class MainActivity : AppCompatActivity, IValueEventListener

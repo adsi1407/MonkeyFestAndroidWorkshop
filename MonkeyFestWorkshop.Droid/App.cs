@@ -1,7 +1,7 @@
 ﻿using Android.App;
-using MonkeyVehicleShop.Droid.DependencyInjection;
+using MonkeyFestWorkshop.Droid.DependencyInjection;
 
-namespace MonkeyVehicleShop.Droid
+namespace MonkeyFestWorkshop.Droid
 {
     public class App: Application
     {

@@ -4,7 +4,7 @@ using Android.Views;
 using Android.Widget;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
 
-namespace MonkeyVehicleShop.Droid.ViewHolders
+namespace MonkeyFestWorkshop.Droid.ViewHolders
 {
     public class VehicleViewHolder : RecyclerView.ViewHolder
     {

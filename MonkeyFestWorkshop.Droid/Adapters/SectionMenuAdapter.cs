@@ -5,9 +5,9 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
-using MonkeyVehicleShop.Droid.ViewHolders;
+using MonkeyFestWorkshop.Droid.ViewHolders;
 
-namespace MonkeyVehicleShop.Droid.Adapters
+namespace MonkeyFestWorkshop.Droid.Adapters
 {
     public class SectionMenuAdapter : RecyclerView.Adapter
     {

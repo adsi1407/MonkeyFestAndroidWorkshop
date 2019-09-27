@@ -5,7 +5,7 @@ using Android.Widget;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
 using Newtonsoft.Json;
 
-namespace MonkeyVehicleShop.Droid.Activities
+namespace MonkeyFestWorkshop.Droid.Activities
 {
     [Activity]
     public class VehicleDetailActivity : AppCompatActivity
