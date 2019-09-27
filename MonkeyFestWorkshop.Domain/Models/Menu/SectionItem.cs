@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using MonkeyFestWorkshop.Domain.Enumerations;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
 
-namespace MonkeyFestWorkshop.Domain.Models
+namespace MonkeyFestWorkshop.Domain.Models.Menu
 {
     public class SectionItem
     {

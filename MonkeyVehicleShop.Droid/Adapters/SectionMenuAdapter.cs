@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Support.V7.Widget;
 using Android.Views;
-using MonkeyFestWorkshop.Domain.Models;
+using MonkeyFestWorkshop.Domain.Models.Menu;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
 using MonkeyVehicleShop.Droid.ViewHolders;
 
 namespace MonkeyVehicleShop.Droid.Adapters

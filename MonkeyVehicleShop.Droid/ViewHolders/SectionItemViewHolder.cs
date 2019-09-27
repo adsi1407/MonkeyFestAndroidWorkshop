@@ -2,7 +2,8 @@
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using MonkeyFestWorkshop.Domain.Models;
+using MonkeyFestWorkshop.Domain.Enumerations;
+using MonkeyFestWorkshop.Domain.Models.Menu;
 
 namespace MonkeyVehicleShop.Droid.ViewHolders
 {

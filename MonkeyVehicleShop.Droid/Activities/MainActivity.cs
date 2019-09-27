@@ -8,9 +8,11 @@ using Android.Support.V7.Widget;
 using Android.Util;
 using Firebase;
 using Firebase.Database;
-using MonkeyFestWorkshop.Domain.Models;
 using Newtonsoft.Json;
 using MonkeyVehicleShop.Droid.Adapters;
+using MonkeyFestWorkshop.Domain.Models.Menu;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
+using MonkeyFestWorkshop.Domain.Enumerations;
 
 namespace MonkeyVehicleShop.Droid.Activities
 {

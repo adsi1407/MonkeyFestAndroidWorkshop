@@ -2,7 +2,7 @@
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
-using MonkeyFestWorkshop.Domain.Models;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
 using Newtonsoft.Json;
 
 namespace MonkeyVehicleShop.Droid.Activities

@@ -6,6 +6,10 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Enumerations\" />
+    <Folder Include="Models\Vehicle\" />
+    <Folder Include="Models\Menu\" />
+    <Folder Include="Models\User\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Class1.cs" />

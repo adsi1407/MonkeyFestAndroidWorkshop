@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MonkeyFestWorkshop.DataAccess.Repositories;
-using MonkeyFestWorkshop.Domain.Models;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
 
 namespace MonkeyFestWorkshop.DataAccess.Implementations.Mock
 {

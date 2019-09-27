@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MonkeyFestWorkshop.Domain.Models
+namespace MonkeyFestWorkshop.Domain.Models.Vehicle
 {
     public class Car: BaseVehicle
     {

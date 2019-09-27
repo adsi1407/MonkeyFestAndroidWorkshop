@@ -1,4 +1,4 @@
-﻿namespace MonkeyFestWorkshop.Domain.Models
+﻿namespace MonkeyFestWorkshop.Domain.Enumerations
 {
     public enum SectionType
     {
