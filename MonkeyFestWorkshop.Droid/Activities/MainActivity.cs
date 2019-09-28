@@ -3,7 +3,6 @@ using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Widget;
@@ -17,13 +16,12 @@ using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.User;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
 using MonkeyFestWorkshop.Droid.Adapters;
-using MonkeyFestWorkshop.Droid.DependencyInjection;
 using Newtonsoft.Json;
 
 namespace MonkeyFestWorkshop.Droid.Activities
 {
     [Activity]
-    public class MainActivity : AppCompatActivity, IValueEventListener
+    public class MainActivity : BaseActivity, IValueEventListener
     {
         private RecyclerView recyclerView;
         private const string authenticatedUser = "1111";
@@ -42,10 +40,7 @@ namespace MonkeyFestWorkshop.Droid.Activities
 
         private void SetDependencies()
         {
-            var concreteIoCContainer = new PlatformIoCContainer();
-            IContainer container = concreteIoCContainer.CreateContainer();
-            var scope = container.BeginLifetimeScope();
-            userServiceDomain = scope.Resolve<UserServiceDomain>();
+            userServiceDomain = ConfigureDependencies().Resolve<UserServiceDomain>();
         }
 
         private void GetUserInfo()
