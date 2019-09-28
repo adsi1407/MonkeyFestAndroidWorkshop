@@ -3,8 +3,8 @@ namespace MonkeyFestWorkshop.Domain.Models.User
 {
     public class UserInfo
     {
-        public UserInfo()
-        {
-        }
+        public string Id { get; set; }
+
+        public string Name { get; set; }
     }
 }
