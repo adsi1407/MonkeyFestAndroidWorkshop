@@ -4,6 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Mock|AnyCPU' ">
+    <IntermediateOutputPath>obj\Debug\netstandard2.0</IntermediateOutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;MOCK;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonkeyFestWorkshop.DataAccess\MonkeyFestWorkshop.DataAccess.csproj" />
     <ProjectReference Include="..\MonkeyFestWorkshop.Domain\MonkeyFestWorkshop.Domain.csproj" />
