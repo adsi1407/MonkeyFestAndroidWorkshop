@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using MonkeyFestWorkshop.DataAccess.Implementations.Mock;
+using MonkeyFestWorkshop.DataAccess.Implementations.Real;
 using MonkeyFestWorkshop.DataAccess.Repositories;
 
 namespace MonkeyFestWorkshop.Core.DependencyInjection

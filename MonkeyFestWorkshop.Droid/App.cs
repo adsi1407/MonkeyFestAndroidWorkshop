@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Runtime;
+using Autofac;
 using MonkeyFestWorkshop.Droid.DependencyInjection;
 
 namespace MonkeyFestWorkshop.Droid
@@ -10,8 +11,14 @@ namespace MonkeyFestWorkshop.Droid
         public override void OnCreate()
         {
             base.OnCreate();
-            var ioCContainer = new PlatformIoCContainer();
-            ioCContainer.CreateContainer();
+            ConfigureDependencies();
+        }
+
+        public ILifetimeScope ConfigureDependencies()
+        {
+            var concreteIoCContainer = new PlatformIoCContainer();
+            IContainer container = concreteIoCContainer.CreateContainer();
+            return container.BeginLifetimeScope();
         }
     }
 }

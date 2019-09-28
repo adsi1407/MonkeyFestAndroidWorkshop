@@ -1,18 +1,22 @@
 ﻿using System.Collections.Generic;
-using Android.App;
 using System.Linq;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
+using Autofac;
 using Firebase;
 using Firebase.Database;
-using Newtonsoft.Json;
-using MonkeyFestWorkshop.Droid.Adapters;
-using MonkeyFestWorkshop.Domain.Models.Menu;
-using MonkeyFestWorkshop.Domain.Models.Vehicle;
+using MonkeyFestWorkshop.Core.DomainServices;
 using MonkeyFestWorkshop.Domain.Enumerations;
+using MonkeyFestWorkshop.Domain.Models.Menu;
+using MonkeyFestWorkshop.Domain.Models.User;
+using MonkeyFestWorkshop.Domain.Models.Vehicle;
+using MonkeyFestWorkshop.Droid.Adapters;
+using MonkeyFestWorkshop.Droid.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace MonkeyFestWorkshop.Droid.Activities
 {
@@ -20,6 +24,8 @@ namespace MonkeyFestWorkshop.Droid.Activities
     public class MainActivity : AppCompatActivity, IValueEventListener
     {
         private RecyclerView recyclerView;
+        private const string authenticatedUser = "1111";
+        private UserServiceDomain userServiceDomain;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,7 +33,23 @@ namespace MonkeyFestWorkshop.Droid.Activities
             SetContentView(Resource.Layout.activity_main);
             FirebaseApp.InitializeApp(Application.Context);
 
+            SetDependencies();
+            GetUserInfo();
             LoadVehicles();
+        }
+
+        private void SetDependencies()
+        {
+            var concreteIoCContainer = new PlatformIoCContainer();
+            IContainer container = concreteIoCContainer.CreateContainer();
+            var scope = container.BeginLifetimeScope();
+            userServiceDomain = scope.Resolve<UserServiceDomain>();
+        }
+
+        private void GetUserInfo()
+        {
+            UserInfo userInfo = userServiceDomain.GetUserInfo(authenticatedUser);
+            Title = userInfo.Name;
         }
 
         private void ConfigRecyclerView(List<SectionItem> menu)
