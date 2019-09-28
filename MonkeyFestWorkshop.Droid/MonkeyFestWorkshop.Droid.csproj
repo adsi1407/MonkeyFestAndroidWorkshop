@@ -72,6 +72,7 @@
     <Compile Include="Activities\VehicleDetailActivity.cs" />
     <Compile Include="DependencyInjection\Strategies\NetworkStrategy.cs" />
     <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Infrastructure\RealmTimeData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -464,6 +465,7 @@
     <Folder Include="ViewHolders\" />
     <Folder Include="Activities\" />
     <Folder Include="DependencyInjection\Strategies\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
