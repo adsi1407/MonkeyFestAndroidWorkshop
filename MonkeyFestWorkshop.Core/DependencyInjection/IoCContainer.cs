@@ -15,6 +15,7 @@ namespace MonkeyFestWorkshop.Core.DependencyInjection
         private void RegisterSharedDependencies(ContainerBuilder containerBuilder)
         {
             containerBuilder.RegisterModule<RepositoriesModule>();
+            containerBuilder.RegisterModule<DomainModule>();
         }
 
         protected abstract void RegisterDependencies(ContainerBuilder containerBuilder);
