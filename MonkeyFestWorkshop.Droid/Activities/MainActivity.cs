@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -10,6 +9,7 @@ using Autofac;
 using Firebase;
 using Firebase.Database;
 using MonkeyFestWorkshop.Core.DomainServices;
+using MonkeyFestWorkshop.Core.Factories;
 using MonkeyFestWorkshop.Domain.Enumerations;
 using MonkeyFestWorkshop.Domain.Exceptions;
 using MonkeyFestWorkshop.Domain.Models.Menu;
@@ -26,6 +26,7 @@ namespace MonkeyFestWorkshop.Droid.Activities
         private RecyclerView recyclerView;
         private const string authenticatedUser = "1111";
         private UserServiceDomain userServiceDomain;
+        private VehicleFactory vehicleFactory;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -126,8 +127,9 @@ namespace MonkeyFestWorkshop.Droid.Activities
                 list.Add(car);
             }
 
-            List<BaseVehicle> orderList = list.Where(x => !x.Featured).Select(x => x).OrderByDescending((x) =>  x.Price).ToList();
-            List<BaseVehicle> featuredVehicles = list.Where(x => x.Featured).Select(x => x).ToList();
+            vehicleFactory = new VehicleFactory(list);
+            List<BaseVehicle> orderList = vehicleFactory.Create(VehicleCategory.Normal);
+            List<BaseVehicle> featuredVehicles = vehicleFactory.Create(VehicleCategory.Featured);
 
             List<SectionItem> sectionItems = new List<SectionItem>();
 
