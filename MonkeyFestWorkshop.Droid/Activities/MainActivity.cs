@@ -9,6 +9,7 @@ using Autofac;
 using Firebase;
 using MonkeyFestWorkshop.Core.Contracts.Platform;
 using MonkeyFestWorkshop.Core.DomainServices;
+using MonkeyFestWorkshop.Core.Factories;
 using MonkeyFestWorkshop.Domain.Exceptions;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.User;
@@ -25,6 +26,7 @@ namespace MonkeyFestWorkshop.Droid.Activities
         private RecyclerView recyclerView;
         private const string authenticatedUser = "1111";
         private UserServiceDomain userServiceDomain;
+        private VehicleFactory vehicleFactory;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

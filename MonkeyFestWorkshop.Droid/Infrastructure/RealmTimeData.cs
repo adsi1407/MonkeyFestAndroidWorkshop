@@ -3,6 +3,7 @@ using System.Linq;
 using Android.Util;
 using Firebase.Database;
 using MonkeyFestWorkshop.Core.Contracts.Platform;
+using MonkeyFestWorkshop.Core.Factories;
 using MonkeyFestWorkshop.Domain.Enumerations;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
@@ -13,7 +14,7 @@ namespace MonkeyFestWorkshop.Droid.Infrastructure
     {
         private readonly IVehicleData vehicleData;
         private readonly DatabaseReference reference;
-
+        private VehicleFactory vehicleFactory;
         private const string Tag = "RealmTimeData";
 
         public RealmTimeData(IVehicleData vehicleData)
@@ -56,12 +57,13 @@ namespace MonkeyFestWorkshop.Droid.Infrastructure
                     var featured = dataSnapshot.Child("featured").Value as Java.Lang.Boolean;
                     car.Featured = featured.BooleanValue();
                 }
-
+                
                 list.Add(car);
             }
 
-            List<BaseVehicle> orderList = list.Where(x => !x.Featured).Select(x => x).OrderByDescending((x) => x.Price).ToList();
-            List<BaseVehicle> featuredVehicles = list.Where(x => x.Featured).Select(x => x).ToList();
+            vehicleFactory = new VehicleFactory(list);
+            List<BaseVehicle> orderList = vehicleFactory.Create(VehicleCategory.Normal);
+            List<BaseVehicle> featuredVehicles = vehicleFactory.Create(VehicleCategory.Featured);
 
             List<SectionItem> sectionItems = new List<SectionItem>();
 
