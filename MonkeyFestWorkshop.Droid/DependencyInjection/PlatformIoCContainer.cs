@@ -1,5 +1,7 @@
 ﻿using Autofac;
+using MonkeyFestWorkshop.Core.Contracts.Platform;
 using MonkeyFestWorkshop.Core.DependencyInjection;
+using MonkeyFestWorkshop.Droid.DependencyInjection.Strategies;
 
 namespace MonkeyFestWorkshop.Droid.DependencyInjection
 {
@@ -7,7 +9,7 @@ namespace MonkeyFestWorkshop.Droid.DependencyInjection
     {
         protected override void RegisterDependencies(ContainerBuilder containerBuilder)
         {
-            //Nothing to implement
+            containerBuilder.RegisterType<NetworkStrategy>().As<INetworkStrategy>();
         }
     }
 }
