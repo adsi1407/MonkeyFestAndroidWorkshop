@@ -17,6 +17,8 @@
   <ItemGroup>
     <Folder Include="DependencyInjection\" />
     <Folder Include="DomainServices\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Platform\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.4" />

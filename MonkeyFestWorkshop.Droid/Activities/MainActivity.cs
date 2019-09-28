@@ -6,11 +6,13 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
+using Android.Widget;
 using Autofac;
 using Firebase;
 using Firebase.Database;
 using MonkeyFestWorkshop.Core.DomainServices;
 using MonkeyFestWorkshop.Domain.Enumerations;
+using MonkeyFestWorkshop.Domain.Exceptions;
 using MonkeyFestWorkshop.Domain.Models.Menu;
 using MonkeyFestWorkshop.Domain.Models.User;
 using MonkeyFestWorkshop.Domain.Models.Vehicle;
@@ -48,8 +50,22 @@ namespace MonkeyFestWorkshop.Droid.Activities
 
         private void GetUserInfo()
         {
-            UserInfo userInfo = userServiceDomain.GetUserInfo(authenticatedUser);
-            Title = userInfo.Name;
+            try
+            {
+                UserInfo userInfo = userServiceDomain.GetUserInfo(authenticatedUser);
+                Title = userInfo.Name;
+            }
+            catch (NetworkException ex)
+            {
+                Title = string.Empty;
+                Toast.MakeText(this, ex.Message, ToastLength.Short).Show();
+            }
+            catch (System.Exception ex)
+            {
+                Title = string.Empty;
+                Log.Error(ComponentName.ToString(), ex.Message);
+                Toast.MakeText(this, "Ha ocurrido un error inesperado.", ToastLength.Short).Show();
+            }
         }
 
         private void ConfigRecyclerView(List<SectionItem> menu)

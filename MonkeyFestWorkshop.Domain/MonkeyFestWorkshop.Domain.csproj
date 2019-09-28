@@ -10,6 +10,7 @@
     <Folder Include="Models\Vehicle\" />
     <Folder Include="Models\Menu\" />
     <Folder Include="Models\User\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Class1.cs" />
